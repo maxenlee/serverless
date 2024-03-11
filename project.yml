@@ -8,5 +8,16 @@ packages:
           timeout: 15000
           memory: 512
         environment:  # Use the correct key for environment variables
-          PICKLEJAR_ACCESS: ''
-          PICKLEJAR_SECRET: ''
+          PICKLEJAR_ACCESS: ${PICKLEJAR_ACCESS}
+          PICKLEJAR_SECRET: ${PICKLEJAR_SECRET}
+  - name: validator
+    functions:
+      - name: messenger        
+        runtime: python:default
+        web: false
+        limits:
+          timeout: 3000
+          memory: 512
+        environment:  # Use the correct key for environment variables
+          PICKLEJAR_ACCESS: ${PICKLEJAR_ACCESS}
+          PICKLEJAR_SECRET: ${PICKLEJAR_SECRET}
