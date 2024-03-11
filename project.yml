@@ -5,8 +5,8 @@ packages:
         runtime: python:default
         web: false
         limits:
-          timeout: 3000
+          timeout: 15000
           memory: 512
         environment:  # Use the correct key for environment variables
-          PICKLEJAR_ACCESS: 'DO00FDN8U48BVEHPUF9L'
-          PICKLEJAR_SECRET: '3qkn49HpH/8ESOocW58x+sVZjohG56W87n/1DtqDkLs'
+          PICKLEJAR_ACCESS: ''
+          PICKLEJAR_SECRET: ''
