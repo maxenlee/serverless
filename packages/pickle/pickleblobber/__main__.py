@@ -1,12 +1,12 @@
-import os
+from os import environ
 import pickle
 import io
 import boto3
 import inflect
 
 def process_and_upload_text_chunks(chunk, folder_name, file_name):
-    access_key = os.getenv('PICKLEJAR_ACCESS')
-    secret_key = os.getenv('PICKLEJAR_SECRET')
+    access_key = environ["PICKLEJAR_ACCESS"]
+    secret_key = environ["PICKLEJAR_SECRET"]
 
     # Initialize the cloud storage session and client
     session = boto3.session.Session()
